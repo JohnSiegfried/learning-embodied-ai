@@ -1,0 +1,18 @@
+# 本地工具与私有配置（不入库）
+.claude/
+.workbuddy/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 数据产物（原始/处理中数据不入库，只留目录结构）
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep

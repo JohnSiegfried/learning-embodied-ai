@@ -1,0 +1,37 @@
+---
+tags: [experiment, {{experiment_tag}}]
+created: {{date}}
+updated: {{date}}
+status: planned
+phase: "{{phase}}"
+knowledge: "[[{{phase_dir}}/]]"
+---
+
+# {{exp_id}}: {{title}}
+
+## 目标
+<本次实验要验证或达成什么>
+
+## 假设
+<实验前的预期结论>
+
+## 实验设计
+
+| 参数 | 值 |
+|------|-----|
+| {{PARAM_ROWS}}
+
+## 文件
+
+| 文件 | 用途 |
+|------|------|
+| `{{FILE_ROWS}}` |
+
+## 实验记录
+
+| 日期 | 变更 | 指标 | 备注 |
+|------|------|------|------|
+| {{LOG_ROWS}} |
+
+## 结论
+<实验结束后填写>

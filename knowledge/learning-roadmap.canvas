@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "id": "group-overview",
+      "type": "group",
+      "label": "具身智能 · 课程总览",
+      "x": -80,
+      "y": -80,
+      "width": 760,
+      "height": 240,
+      "color": "6"
+    },
+    {
+      "id": "file-curriculum",
+      "type": "file",
+      "file": "knowledge/curriculum.md",
+      "x": -40,
+      "y": -40,
+      "width": 300,
+      "height": 120
+    },
+    {
+      "id": "file-index",
+      "type": "file",
+      "file": "knowledge/_index.md",
+      "x": 300,
+      "y": -40,
+      "width": 300,
+      "height": 120
+    },
+    {
+      "id": "group-phase1",
+      "type": "group",
+      "label": "Phase 1 · 全景与基础打底 (0/6)",
+      "x": 0,
+      "y": 260,
+      "width": 600,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "text-phase1",
+      "type": "text",
+      "text": "1.1 什么是具身智能\n1.2 机器人系统解剖\n1.3 位姿与坐标变换最小集\n1.4 动作空间与控制频率\n1.5 仿真环境初识\n1.6 exp01 PyBullet 机械臂初体验",
+      "x": 40,
+      "y": 300,
+      "width": 520,
+      "height": 100
+    },
+    {
+      "id": "group-phase2",
+      "type": "group",
+      "label": "Phase 2 · 模仿学习与 Diffusion Policy (0/6)",
+      "x": 0,
+      "y": 540,
+      "width": 600,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "text-phase2",
+      "type": "text",
+      "text": "2.1 机器人学习问题形式化\n2.2 Behavior Cloning\n2.3 BC 的失败模式\n2.4 Diffusion Policy\n2.5 动作表示进阶\n2.6 exp02 仿真中训练 Diffusion Policy",
+      "x": 40,
+      "y": 580,
+      "width": 520,
+      "height": 100
+    },
+    {
+      "id": "group-phase3",
+      "type": "group",
+      "label": "Phase 3 · VLA 视觉-语言-动作模型 (0/6)",
+      "x": 0,
+      "y": 820,
+      "width": 600,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "text-phase3",
+      "type": "text",
+      "text": "3.1 VLA 总览\n3.2 动作 token 化\n3.3 OpenVLA 架构拆解\n3.4 连续动作头：Flow Matching\n3.5 评测体系\n3.6 exp03 微调一个小型 VLA",
+      "x": 40,
+      "y": 860,
+      "width": 520,
+      "height": 100
+    },
+    {
+      "id": "group-phase4",
+      "type": "group",
+      "label": "Phase 4 · Sim2Real 与部署落地 (0/5)",
+      "x": 0,
+      "y": 1100,
+      "width": 600,
+      "height": 160,
+      "color": "5"
+    },
+    {
+      "id": "text-phase4",
+      "type": "text",
+      "text": "4.1 Sim2Real gap 与域随机化\n4.2 遥操作与数据采集\n4.3 ROS 2 最小集（按需）\n4.4 控制理论最小集（按需）\n4.5 exp04 Capstone",
+      "x": 40,
+      "y": 1140,
+      "width": 520,
+      "height": 80
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-curriculum-index",
+      "fromNode": "file-curriculum",
+      "fromSide": "right",
+      "toNode": "file-index",
+      "toSide": "left",
+      "label": "仪表盘"
+    },
+    {
+      "id": "edge-curriculum-p1",
+      "fromNode": "file-curriculum",
+      "fromSide": "bottom",
+      "toNode": "group-phase1",
+      "toSide": "top",
+      "label": "当前阶段"
+    },
+    {
+      "id": "edge-overview-p1",
+      "fromNode": "group-overview",
+      "fromSide": "bottom",
+      "toNode": "group-phase1",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-p1-p2",
+      "fromNode": "group-phase1",
+      "fromSide": "bottom",
+      "toNode": "group-phase2",
+      "toSide": "top",
+      "label": "完成后进入"
+    },
+    {
+      "id": "edge-p2-p3",
+      "fromNode": "group-phase2",
+      "fromSide": "bottom",
+      "toNode": "group-phase3",
+      "toSide": "top",
+      "label": "完成后进入"
+    },
+    {
+      "id": "edge-p3-p4",
+      "fromNode": "group-phase3",
+      "fromSide": "bottom",
+      "toNode": "group-phase4",
+      "toSide": "top",
+      "label": "完成后进入"
+    },
+    {
+      "id": "edge-p1-p2-text",
+      "fromNode": "text-phase1",
+      "fromSide": "bottom",
+      "toNode": "text-phase2",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-p2-p3-text",
+      "fromNode": "text-phase2",
+      "fromSide": "bottom",
+      "toNode": "text-phase3",
+      "toSide": "top"
+    },
+    {
+      "id": "edge-p3-p4-text",
+      "fromNode": "text-phase3",
+      "fromSide": "bottom",
+      "toNode": "text-phase4",
+      "toSide": "top"
+    }
+  ]
+}
